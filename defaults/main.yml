@@ -1,1 +1,3 @@
 thelounge_version: "3.0.1"
+# offical docker image uses /var/opt/thelounge
+thelounge_home_path: "/var/opt/thelounge"
