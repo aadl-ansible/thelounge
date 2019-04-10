@@ -1,0 +1,20 @@
+---
+- name: Install NodeJS
+  apk:
+    name: nodejs
+    state: present
+    update_cache: yes
+- name: Install Yarn
+  apk:
+    name: yarn
+    state: present
+- name: Install The Lounge
+  yarn:
+    name: thelounge
+    version: "{{ thelounge_version }}"
+    global: yes
+- name: Install Esprima for validation
+  yarn:
+    name: esprima
+    state: latest
+    global: yes
